@@ -1,5 +1,5 @@
 <script>
-  import githubLogo from './Github-Mark.png';
+  import githubLogo from '@src/public/GitHub-Mark.png';
 </script>
 
 <footer class="border-t border-gray-600 pt-4 text-center m-9">
