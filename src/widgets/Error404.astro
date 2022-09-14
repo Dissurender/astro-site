@@ -8,17 +8,17 @@ import { getHomePermalink } from '@src/utils/permalinks';
   >
     <div class="max-w-md text-center">
       <h2 class="mb-8 font-bold text-9xl">
-        <span class="sr-only">Error</span>
+        <span class="">Error</span>
         <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500"
+          class="bg-clip-text text-transparent bg-gradient-to-r text-gradient"
           >404</span
         >
       </h2>
       <p class="text-3xl font-semibold md:text-3xl">
-        Sorry, we couldn't find this page.
+        Sorry, I couldn't find this page.
       </p>
       <p class="mt-4 mb-8 text-lg text-gray-600 dark:text-slate-400">
-        But dont worry, you can find plenty of other things on our homepage.
+        But dont worry, you can find plenty of other things on my homepage.
       </p>
       <a
         rel="noopener noreferrer"
@@ -29,3 +29,40 @@ import { getHomePermalink } from '@src/utils/permalinks';
     </div>
   </div>
 </section>
+
+<style>
+  :root {
+    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+  }
+
+  h1 {
+    margin: 2rem 0;
+  }
+
+  main {
+    margin: auto;
+    padding: 1em;
+    max-width: 60ch;
+  }
+
+  .text-gradient {
+    font-weight: 900;
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    border-radius: 0.4rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
+    50% {
+      background-position-y: 80%;
+    }
+  }
+</style>
