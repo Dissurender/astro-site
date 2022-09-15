@@ -1,13 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '@src/widgets/Card.astro';
-import Hero from '@src/widgets/Hero.astro';
+import Card from '@lib/widgets/Card.astro';
+import Hero from '@lib/widgets/Hero.astro';
 ---
 
-<Layout title="Rhyn">
-  <main>
+<Layout title="Rodis">
+  <main class="m-auto p-4 max-w-2xl">
     <Hero />
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+    <h1 class="my-8">Welcome to <span class="text-gradient">Astro</span></h1>
     <p class="instructions">
       Check out the <code>src/pages</code> directory to get started.<br />
       <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -42,14 +42,8 @@ import Hero from '@src/widgets/Hero.astro';
     --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
   }
 
-  h1 {
-    margin: 2rem 0;
-  }
-
   main {
-    margin: auto;
-    padding: 1em;
-    max-width: 60ch;
+    /* max-width: 60vw; */
   }
 
   .text-gradient {
@@ -76,7 +70,7 @@ import Hero from '@src/widgets/Hero.astro';
   .instructions {
     line-height: 1.6;
     margin: 1rem 0;
-    background: #6350f1;
+    background: #4f39fa;
     padding: 1rem;
     border-radius: 0.4rem;
     color: var(--color-bg);

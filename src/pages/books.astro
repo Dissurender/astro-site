@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Books from '@src/widgets/bookshelf/Books.svelte';
+import Bookshelf from '@lib/widgets/bookshelf/Bookshelf.svelte';
 ---
 
 <Layout title="Bookshelf">
   <main>
-    <Books />
+    <Bookshelf client:load />
   </main>
 </Layout>
 

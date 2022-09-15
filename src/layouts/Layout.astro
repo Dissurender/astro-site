@@ -1,6 +1,7 @@
 ---
-import Header from '@src/widgets/Header.astro';
-import Footer from '@src/widgets/footer/Footer.svelte';
+import Header from '@lib/widgets/Header.astro';
+import Footer from '@lib/widgets/footer/Footer.svelte';
+import Favicon from '@src/public/favicon.png';
 
 export interface Props {
   title: string;
@@ -14,11 +15,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link
-      rel="icon"
-      type="favicon/image"
-      href="@src/assets/images/favicon.png"
-    />
+    <link rel="icon" href={Favicon} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>

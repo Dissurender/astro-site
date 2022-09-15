@@ -1,3 +1,5 @@
-import { atom } from 'nanostores';
+import { map } from 'nanostores';
 
-export const isManage = atom(false);
+export const isManage = map({
+  state: true,
+});
