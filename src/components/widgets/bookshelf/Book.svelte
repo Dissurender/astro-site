@@ -18,9 +18,10 @@
           console.log('Delete request');
           window.location.href = '/books/';
         }
-      });
+      })
   };
 </script>
+
 
 <!-- HTML component -->
 

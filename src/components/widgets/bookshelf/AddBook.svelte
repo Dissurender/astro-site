@@ -26,23 +26,22 @@
   }
 </script>
 
-<div class="flex flex-1 justify-center my-3 mx-auto max-w-2xl">
+<div class="flex flex-1 my-3 max-w-full">
+  
   <form
     on:submit|preventDefault={onSubmit}
     id="add-form"
-    class="grid grid-cols-3 gap-0 grid-flow-row
-		 m-1"
+    class="
+     m-1 form-control"
   >
-    <section class="div1 col-span-1">
-      <div class="m-2 w-20 title">
+  <div class=" flex gap-36 mx-auto max-w-lg">
+    
+    <div>
+      <div class="m-2 w-20 ">
         <input
           type="text"
           id="title"
-          class="p-2
-					font-normal placeholder-darker
-					text-base bg-lighter bg-clip-padding
-					border border-solid border-darker
-					rounded"
+          class="input input-bordered focus:input-accent"
           name="title"
           placeholder="Title of book"
         />
@@ -52,11 +51,7 @@
         <input
           type="text"
           id="author"
-          class="p-2
-					font-normal placeholder-darker
-					text-base bg-lighter bg-clip-padding
-					border border-solid border-darker
-					rounded"
+          class="input input-bordered focus:input-accent"
           name="author"
           placeholder="Author of book"
         />
@@ -66,48 +61,41 @@
         <input
           type="number"
           id="pages"
-          class="p-2
-					font-normal placeholder-darker
-					text-base bg-lighter bg-clip-padding
-					border border-solid border-darker
-					rounded"
+          class="input input-bordered focus:input-accent"
           name="pages"
           placeholder="Pages in book"
         />
       </div>
 
-      <div class="m-2 w-20 rating">
+      <div class="m-2 w-20 ">
         <input
           type="number"
           id="rating"
-          class="p-2
-					font-normal placeholder-darker
-					text-base bg-lighter bg-clip-padding
-					border border-solid border-darker
-					rounded"
+          class="input input-bordered focus:input-accent"
           name="rating"
           placeholder="Rating out of 10"
         />
       </div>
-    </section>
+    </div>
 
-    <div class="m-2 pl-4 w-full desc col-span-2 ">
+    <div>
       <textarea
         name="desc"
         id="desc"
-        rows="8"
-        class="block p-4 w-full text-base bg-lighter rounded-lg 
-					border border-darker 
-					placeholder-darker dark:text-white"
+        rows="7"
+        cols="28"
+        spellcheck="true"
+        class="textarea textarea-bordered focus:textarea-accent m-2 resize-none"
         placeholder="Book Description"
       />
     </div>
+  </div>
+  <div class="mx-auto my-2">
+    <button class="btn btn-wide hover:btn-accent">Submit</button>
+  </div>
+</form>
 
     <!-- TODO - Replace button styling -->
-    <div class="bttn m-2 col-span-3">
-      <button class="button-9 bg-darker border border-slate-700">Submit</button>
-    </div>
-  </form>
 </div>
 
 <!-- 

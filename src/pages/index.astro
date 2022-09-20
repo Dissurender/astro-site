@@ -2,16 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '@lib/widgets/Card.astro';
 import Hero from '@lib/widgets/Hero.astro';
+import Footer from '@lib/widgets/footer/Footer.svelte';
 ---
 
+
+
 <Layout title="Rodis">
-  <main class="m-auto p-4 max-w-2xl">
+  <main class="mx-auto p-4 max-w-2xl">
     <Hero />
-    <h1 class="my-8">Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      Check out the <code>src/pages</code> directory to get started.<br />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
+
     <ul role="list" class="link-card-grid">
       <Card
         href="/books/"
@@ -35,12 +34,10 @@ import Hero from '@lib/widgets/Hero.astro';
       />
     </ul>
   </main>
+  <Footer />
 </Layout>
 
 <style>
-  :root {
-    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-  }
 
   main {
     /* max-width: 60vw; */
@@ -54,7 +51,7 @@ import Hero from '@lib/widgets/Hero.astro';
     background-size: 100% 200%;
     background-position-y: 100%;
     border-radius: 0.4rem;
-    animation: pulse 4s ease-in-out infinite;
+    /* animation: pulse 4s ease-in-out infinite; */
   }
 
   @keyframes pulse {

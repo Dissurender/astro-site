@@ -2,4 +2,6 @@
   import { isManage } from '@atom/manage';
 </script>
 
-<button on:click={() => isManage.set(!$isManage)}>Manage</button>
+<div class="w-full mx-auto">
+  <button on:click={() => isManage.set(!$isManage)} class="btn hover:btn-accent">Manage</button>
+</div>

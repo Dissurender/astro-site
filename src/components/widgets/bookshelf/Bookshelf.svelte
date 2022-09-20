@@ -7,8 +7,10 @@
   let toggle = $isManage;
 </script>
 
-<div class="w-full max-w-4xl mt-4 mx-auto">
-  <Button />
+<div class=" w-full my-4 mx-auto">
+
+    <Button />
+
   {#if { toggle }}
     <AddBook />
   {/if}

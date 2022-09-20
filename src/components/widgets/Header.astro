@@ -3,39 +3,36 @@ import Logo from '@lib/widgets/Logo.astro';
 import { getHomePermalink } from '@src/utils/permalinks';
 ---
 
-<header
-  class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0"
->
-  <div
-    class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4"
-  >
-    <div class="flex justify-between">
-      <a class="flex items-center" href={getHomePermalink()}>
-        <Logo />
-      </a>
-    </div>
-    <nav
-      class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto"
-      aria-label="Main navigation"
-      id="menu"
-    >
-      <ul
-        class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center collapse w-full md:w-auto collapsed text-xl md:text-base"
+<header class="sticky top-0 z-40 flex-none mx-auto w-full glass">
+  <div class="navbar bg-neutral">
+    <div class="flex-1 ml-4">
+      <a href={getHomePermalink()} rel="noreferrer noopener" class="normal-case text-xl text-neutral-content font-semibold"
+        >Rodis</a
       >
-        <li>
-          <a
-            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="/books/">Bookshelf</a
-          >
-        </li>
-        <li class="md:hidden">
-          <a
-            class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-            href="https://github.com/onwidget/astrowind"
-            >Github
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal p-0">
+        <li><a rel="noreferrer noopener">Item 1</a></li>
+        <li tabindex="0">
+          <a rel="noreferrer noopener">
+            Projects
+            <svg
+              class="fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              ><path
+                d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+              ></path>
+            </svg>
           </a>
+          <ul class="p-2 bg-base-300">
+            <li><a href="/books/" rel="noreferrer noopener">Bookshelf</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
         </li>
       </ul>
-    </nav>
+    </div>
   </div>
 </header>
