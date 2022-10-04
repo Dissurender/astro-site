@@ -1,18 +1,18 @@
 ---
-import Logo from '@lib/widgets/Logo.astro';
 import { getHomePermalink } from '@src/utils/permalinks';
 ---
 
 <header class="sticky top-0 z-40 flex-none mx-auto w-full glass">
   <div class="navbar bg-neutral">
     <div class="flex-1 ml-4">
-      <a href={getHomePermalink()} rel="noreferrer noopener" class="normal-case text-xl text-neutral-content font-semibold"
-        >Rodis</a
+      <a
+        href={getHomePermalink()}
+        rel="noreferrer noopener"
+        class="normal-case text-xl text-neutral-content font-semibold">Rodis</a
       >
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal p-0">
-        <li><a rel="noreferrer noopener">Item 1</a></li>
         <li tabindex="0">
           <a rel="noreferrer noopener" class="hover:bg-transparent">
             Projects
@@ -29,7 +29,8 @@ import { getHomePermalink } from '@src/utils/permalinks';
           </a>
           <ul class="p-2 bg-base-300">
             <li><a href="/books/" rel="noreferrer noopener">Shelf Life</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a href="/" rel="noreferrer noopener">Test Item</a></li>
+            <li><a href="/" rel="noreferrer noopener">Test Item</a></li>
           </ul>
         </li>
       </ul>
