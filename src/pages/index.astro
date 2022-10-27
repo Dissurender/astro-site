@@ -4,6 +4,8 @@ import Card from '@lib/widgets/Card.astro';
 import Hero from '@lib/widgets/Hero.astro';
 import Footer from '@lib/widgets/Footer.astro';
 import shelflife from '../public/img/shelflife.png'
+
+const placeholder = 'https://placeimg.com/450/250/arch';
 ---
 
 <Layout title="Rodis">
@@ -13,8 +15,8 @@ import shelflife from '../public/img/shelflife.png'
   <div class="flex justify-around my-8 mx-auto max-w-7xl">
     <Card
       client:visible
-      href="/books/"
-      image={shelflife}
+      href="https://github.com/Dissurender/shelf-life-backend"
+      image={shelflife || placeholder}
       title="Shelf Life"
       body="My personal reading list and thoughts on books."
       tags={["MVC"]}
@@ -22,19 +24,19 @@ import shelflife from '../public/img/shelflife.png'
     <Card
       client:visible
       href="#"
-      image=""
+      image={placeholder}
       title="Genrenora"
       body="Discover genre attributes for Spotify songs"
       tags={["Astro","SSR"]}
     />
-    <Card
+    <!-- <Card
       client:visible
       href="#"
-      image=""
+      image={placeholder}
       title="Themes"
       body="Explore a galaxy of community-built starter themes."
       tags={[]}
-    />
+    /> -->
   </div>
   <Footer />
 </Layout>
