@@ -3,18 +3,21 @@ export interface Props {
   title: string;
   body: string;
   href: string;
+  image: string;
   tags: string[];
 }
 
-const { href, title, body, tags } = Astro.props;
+const { href, title, image, body, tags } = Astro.props;
 ---
 
 <div class="card w-1/5 bg-neutral shadow-xl">
   <a href={href}>
     <figure>
       <img
-        src="https://placeimg.com/450/250/arch"
+        src={image}
         alt="Thumbnail for linked site"
+        width="450"
+        height="250"
       />
     </figure>
     <div class="card-body">

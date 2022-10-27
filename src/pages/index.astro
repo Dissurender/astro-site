@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '@lib/widgets/Card.astro';
 import Hero from '@lib/widgets/Hero.astro';
 import Footer from '@lib/widgets/Footer.astro';
+import shelflife from '../public/img/shelflife.png'
 ---
 
 <Layout title="Rodis">
@@ -13,6 +14,7 @@ import Footer from '@lib/widgets/Footer.astro';
     <Card
       client:visible
       href="/books/"
+      image={shelflife}
       title="Shelf Life"
       body="My personal reading list and thoughts on books."
       tags={["MVC"]}
@@ -20,6 +22,7 @@ import Footer from '@lib/widgets/Footer.astro';
     <Card
       client:visible
       href="#"
+      image=""
       title="Genrenora"
       body="Discover genre attributes for Spotify songs"
       tags={["Astro","SSR"]}
@@ -27,6 +30,7 @@ import Footer from '@lib/widgets/Footer.astro';
     <Card
       client:visible
       href="#"
+      image=""
       title="Themes"
       body="Explore a galaxy of community-built starter themes."
       tags={[]}
