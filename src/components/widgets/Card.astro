@@ -27,9 +27,7 @@ const { href, title, image, body, tags } = Astro.props;
       </h2>
       <p>{body}</p>
       <div class="card-actions justify-end">
-        {tags.map( (tag) => (
-          <div class="badge badge-outline">{tag}</div>
-        ))}
+        {tags.map((tag) => <div class="badge badge-outline">{tag}</div>)}
       </div>
     </div>
   </a>
